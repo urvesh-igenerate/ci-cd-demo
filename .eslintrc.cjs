@@ -1,31 +1,32 @@
-const { version } = require("react");
+// const { version } = require("react");
 
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "plugin:react/recommended",
-    "prettier",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:react/recommended',
+    'prettier',
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.js"],
-  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
-  settings: { react: { version: "18.2" } },
-  plugins: ["react-refresh", "react", "prettier"],
+  ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
+  parser: { ecmaVersion: 'latest', sourceType: 'module' },
+  // parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
+  settings: { react: { version: '18.2' } },
+  plugins: ['react-refresh', 'react', 'prettier'],
   rules: {
-    "react/jsx-no-target-blank": "off",
-    "react-refresh/only-export-components": [
-      "warn",
+    'react/jsx-no-target-blank': 'off',
+    'react-refresh/only-export-components': [
+      'warn',
       { allowConstantExport: true },
     ],
-    "prettier/prettier": "error",
+    'prettier/prettier': 'error',
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
 };
