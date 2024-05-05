@@ -13,7 +13,7 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
   // parser: { ecmaVersion: 'latest', sourceType: 'module' },
-  praser: '@typescript-eslint/parser',
+  parser: '@typescript-eslint/parser',
   // parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: { react: { version: '18.2' } },
   plugins: ['react-refresh', 'react', 'prettier'],
