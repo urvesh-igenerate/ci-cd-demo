@@ -1,4 +1,4 @@
-name : Continuous Integration
+name: Continuous Integration
 on:
   push:
   pull_request:
@@ -6,26 +6,26 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v2
         with:
-           fetch-depth: 0
+          fetch-depth: 0
       - name: Use Node.js
-       uses: actions/setup-node@v2
-       with: 
-           node-version: '20.3.1'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.3.1'
 
       - name: Install Deps
-      run: npm install
+        run: npm install
 
       - name: Run linters
-      run: npm run lint
+        run: npm run lint
 
       - name: Run Formatters
-      run: npm run format
+        run: npm run format
 
       - name: Check commit messages
-      uses: wagoid/commitlint-github-action@v3
-      with:
+        uses: wagoid/commitlint-github-action@v3
+        with:
           configFile: commitlint.config.cjs
-         
