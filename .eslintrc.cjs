@@ -1,5 +1,3 @@
-// const { version } = require("react");
-
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -8,14 +6,15 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
-    'plugin:react/recommended',
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
-  // parser: { ecmaVersion: 'latest', sourceType: 'module' },
   parser: '@typescript-eslint/parser',
-  // parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   plugins: ['react-refresh', 'react', 'prettier'],
   rules: {
     'react/jsx-no-target-blank': 'off',
@@ -24,10 +23,5 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'prettier/prettier': 'error',
-  },
-  settings: {
-    react: {
-      version: 'detect',
-    },
   },
 };
